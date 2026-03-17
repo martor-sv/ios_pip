@@ -1,0 +1,22 @@
+name: NetworkPiP
+options:
+  bundleIdPrefix: com.user
+targets:
+  NetworkPiP:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources:
+      - Sources
+    settings:
+      INFOPLIST_FILE: Info.plist
+      GENERATE_INFOPLIST_FILE: NO
+      PRODUCT_BUNDLE_IDENTIFIER: com.user.NetworkPiP
+      MARKETING_VERSION: 1.0
+      CURRENT_PROJECT_VERSION: 1
+      DEVELOPMENT_TEAM: "" # User will need to set this in Xcode
+    provisioning:
+      profile: ""
+    capabilities:
+      - backgroundModes:
+          - audio
