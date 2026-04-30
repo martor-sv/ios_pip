@@ -13,9 +13,17 @@ class NetworkMonitor: ObservableObject {
     }
     
     func startMonitoring() {
+        if timer != nil { return }
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
             self?.updateUsage()
         }
+    }
+    
+    func stopMonitoring() {
+        timer?.invalidate()
+        timer = nil
+        lastReceivedBytes = 0
+        lastSentBytes = 0
     }
     
     private func updateUsage() {

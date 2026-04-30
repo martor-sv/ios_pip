@@ -11,12 +11,17 @@ class PiPManager: NSObject, ObservableObject {
     func setupPiP<Content: View>(withView content: Content, sourceView: UIView) {
         print("DEBUG: Setting up PiP...")
         
+        let screenBounds = UIScreen.main.bounds
+        let pipWidth = min(screenBounds.width * 0.8, 300)
+        let pipHeight: CGFloat = 80
+        let pipSize = CGSize(width: pipWidth, height: pipHeight)
+        
         let hostingController = UIHostingController(rootView: content)
-        hostingController.view.frame = CGRect(x: 0, y: 0, width: 300, height: 80)
+        hostingController.view.frame = CGRect(origin: .zero, size: pipSize)
         hostingController.view.backgroundColor = .clear
         
         pipVideoCallViewController = AVPictureInPictureVideoCallViewController()
-        pipVideoCallViewController?.preferredContentSize = CGSize(width: 300, height: 80)
+        pipVideoCallViewController?.preferredContentSize = pipSize
         pipVideoCallViewController?.view.addSubview(hostingController.view)
         pipVideoCallViewController?.view.backgroundColor = .clear
         

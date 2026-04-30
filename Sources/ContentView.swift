@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.scenePhase) var scenePhase
     @StateObject private var monitor = NetworkMonitor()
     @StateObject private var pipManager = PiPManager()
     
@@ -43,6 +44,22 @@ struct ContentView: View {
                    let rootViewController = window.rootViewController {
                     pipManager.setupPiP(withView: PiPContentView(monitor: monitor), sourceView: rootViewController.view)
                 }
+            }
+        }
+        .onChange(of: scenePhase) { newPhase in
+            if newPhase == .background {
+                if !pipManager.isPiPActive {
+                    monitor.stopMonitoring()
+                }
+            } else if newPhase == .active {
+                monitor.startMonitoring()
+            }
+        }
+        .onChange(of: pipManager.isPiPActive) { isActive in
+            if !isActive && scenePhase == .background {
+                monitor.stopMonitoring()
+            } else if isActive {
+                monitor.startMonitoring()
             }
         }
     }
