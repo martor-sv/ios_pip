@@ -11,7 +11,8 @@ targets:
     settings:
       INFOPLIST_FILE: Info.plist
       GENERATE_INFOPLIST_FILE: NO
-      PRODUCT_BUNDLE_IDENTIFIER: com.user.NetworkPiP
+      PRODUCT_BUNDLE_IDENTIFIER: com.tuanmanman.realtime.speed
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
       MARKETING_VERSION: 1.0
       CURRENT_PROJECT_VERSION: 1
       DEVELOPMENT_TEAM: "" # User will need to set this in Xcode

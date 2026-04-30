@@ -11,10 +11,12 @@
 		77250694723C8BD2AC4EAC69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C61044ED7284EB6FF9B2AE /* ContentView.swift */; };
 		8D80F17C49BD7FE982B48A17 /* PiPContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD89883BB5B46D62ABEA85 /* PiPContentView.swift */; };
 		93E87E3C142B43073023C087 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE7437C320BD45A9C9F0A7 /* NetworkMonitor.swift */; };
+		A32F140D73AFEA8776895087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3100D9516EBDB7EBC7142A7B /* Assets.xcassets */; };
 		A68AE41666908967752379D4 /* PiPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69613536A00D3CA52012D676 /* PiPManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3100D9516EBDB7EBC7142A7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47C61044ED7284EB6FF9B2AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		69613536A00D3CA52012D676 /* PiPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiPManager.swift; sourceTree = "<group>"; };
 		7ADD89883BB5B46D62ABEA85 /* PiPContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiPContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 		D9B9B45154397CFD3B8342D8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3100D9516EBDB7EBC7142A7B /* Assets.xcassets */,
 				47C61044ED7284EB6FF9B2AE /* ContentView.swift */,
 				CDFE7437C320BD45A9C9F0A7 /* NetworkMonitor.swift */,
 				97F376E4DEEA910832EF60E1 /* NetworkPiPApp.swift */,
@@ -60,6 +63,7 @@
 			buildConfigurationList = 676815675D0013E12FB27BEE /* Build configuration list for PBXNativeTarget "NetworkPiP" */;
 			buildPhases = (
 				1B67C2DBA48BEB47EC73BB1F /* Sources */,
+				D12227A417890F85611FB944 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -100,6 +104,17 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		D12227A417890F85611FB944 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32F140D73AFEA8776895087 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1B67C2DBA48BEB47EC73BB1F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -122,7 +137,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9LPVM46HQ8;
+				DEVELOPMENT_TEAM = 4KCTX46F5D;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -131,7 +146,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.user.NetworkPiP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuanmanman.realtime.speed;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -143,7 +158,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9LPVM46HQ8;
+				DEVELOPMENT_TEAM = 4KCTX46F5D;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -152,7 +167,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.user.NetworkPiP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuanmanman.realtime.speed;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
